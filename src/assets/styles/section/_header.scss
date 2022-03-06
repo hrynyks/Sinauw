@@ -1,0 +1,95 @@
+.header {
+    padding: 20px 0;
+
+    &-wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @include a (tablet-xl) {
+            flex-direction: column;
+            gap: 30px;
+        }
+    }
+
+    &__navigation {
+        display: flex;
+        align-items: center;
+        gap: 148px;
+
+        @include a (tablet-xl) {
+            gap: 70px;
+        }
+
+        @include a (mobile) {
+            flex-direction: column;
+            gap: 30px;
+        }
+    }
+
+    &__items {
+        display: flex;
+        align-items: center;
+        gap: 44px;
+    }
+
+    &__item {
+        &-link {
+            font-size: toRem(14);
+            color: rgba(255, 255, 255, 0.6);
+
+            &:hover {
+                color: $light-color;
+                font-weight: 600;
+            }
+        }
+    }
+
+    &__btns {
+        display: flex;
+        align-items: center;
+        gap: 69px;
+    }
+
+    &__btn {
+        &-left {
+            font-size: toRem(12);
+            color: #D1D1D7;
+            padding-right: 38px;
+            position: relative;
+
+            &::after {
+                content: "";
+                position: absolute;
+                background: url(/src/assets/images/header-globe.png);
+                width: 24px;
+                height: 24px;
+                right: 10px;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+
+            &::before {
+                content: "";
+                position: absolute;
+                background: url(/src/assets/images/header-polygon.png);
+                width: 6px;
+                height: 5px;
+                right: 0;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+
+        &-right {
+            font-size: toRem(14);
+            font-weight: 700;
+            color: $light-color;
+            width: 102px;
+            line-height: 41px;
+            text-align: center;
+            border-radius: 6px;
+            background-color: $accent-color;
+        }
+    }
+}

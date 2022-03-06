@@ -1,0 +1,180 @@
+.price {
+    padding: 85px 0 115px;
+
+    &__title {
+        font-size: toRem(36);
+        font-weight: 600;
+        color: rgba(255, 255, 255, 0.8);
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    &__descr {
+        font-size: toRem(18);
+        display: block;
+        text-align: center;
+        color: rgba(255, 255, 255, 0.4);
+        margin-bottom: 84px;
+    }
+
+    &__items {
+        display: flex;
+        justify-content: space-between;
+        gap: 42px;
+
+        @include a (laptop) {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    &__item {
+        max-width: 372px;
+        width: 100%;
+        min-height: 515px;
+        background: linear-gradient(180deg, #202246 -53.38%, rgba(40, 43, 87, 0.31) 100%);
+        border-radius: 20px;
+        padding: 36px;
+        display: flex;
+        flex-direction: column;
+
+        &-top {
+            padding-bottom: 29px;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            padding-left: 86px;
+            position: relative;
+
+            &::before {
+                content: "";
+                position: absolute;
+                width: 56px;
+                height: 56px;
+                left: 0;
+                top: 35%;
+                transform: translateY(-50%);
+            }
+
+            &-1::before {
+                background: url(/src/assets/images/price-circle-1.png);
+            }
+
+            &-2::before {
+                background: url(/src/assets/images/price-circle-2.png);
+            }
+
+            &-3::before {
+                background: url(/src/assets/images/price-circle-3.png);
+            }
+
+            &::after {
+                content: "";
+                position: absolute;
+                width: 36px;
+                height: 36px;
+                left: 10px;
+                top: 35%;
+                transform: translateY(-50%);
+            }
+
+            &-1::after {
+                background: url(/src/assets/images/price-item-1.png);
+            }
+
+            &-2::after {
+                background: url(/src/assets/images/price-item-2.png);
+            }
+
+            &-3::after {
+                background: url(/src/assets/images/price-item-3.png);
+            }
+        }
+
+        &-tarif {
+            font-size: toRem(18);
+            font-weight: 600;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        &-price {
+            padding-left: 12px;
+            position: relative;
+
+            &::before {
+                content: "";
+                position: absolute;
+                width: 10px;
+                height: 13px;
+                left: 0;
+                top: 0;
+                background: url(/src/assets/images/price-dollar.png);
+            }
+        }
+
+        &-num {
+            font-size: toRem(28);
+            font-weight: 700;
+            color: $accent-color;
+        }
+
+        &-span {
+            font-size: toRem(11);
+            font-weight: 500;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        &-btn {
+            // flex: 0 0 auto;
+            font-size: toRem(14);
+            font-weight: 700;
+            border-radius: 6px;
+            background-color: transparent;
+            max-width: 300px;
+            width: 100%;
+            line-height: 49px;
+            text-align: center;
+            border: 1px solid rgba($color: $accent-color, $alpha: 0.5);
+            color: $accent-color;
+
+            &:hover {
+                color: $light-color;
+                background-color: $accent-color;
+            }
+        }
+    }
+
+    &__links {
+        // padding: 29px 0 141px;
+        padding-top: 29px;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        border-top: 1.5px solid #272953;
+        flex: 1 0 auto;
+    }
+
+    &__link {
+        position: relative;
+        padding-left: 20px;
+
+        &::before {
+            content: "";
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color: #9799CE;
+            border-radius: 50%;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        &-link {
+            font-size: toRem(14);
+            color: rgba(255, 255, 255, 0.8);
+        }
+    }
+
+
+}

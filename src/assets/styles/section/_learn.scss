@@ -1,0 +1,167 @@
+.learn {
+    padding: 65px 0;
+
+    &__title {
+        font-size: toRem(36);
+        font-weight: 600;
+        color: rgba(255, 255, 255, 0.8);
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    &__descr {
+        font-size: toRem(18);
+        color: rgba(255, 255, 255, 0.4);
+        display: block;
+        text-align: center;
+        margin-bottom: 84px;
+    }
+
+    &__items {
+        display: grid;
+        grid-template-columns: repeat(4, 276px);
+        gap: 32px;
+        align-items: start;
+        justify-content: center;
+        margin-bottom: 48px;
+
+        @include a (laptop) {
+            grid-template-columns: repeat(2, 276px);
+        }
+
+        @include a (tablet) {
+            grid-template-columns: 276px;
+        }
+    }
+
+    &__image {
+        padding: 12px;
+        position: relative;
+
+        &-span {
+            position: absolute;
+            bottom: 25px;
+            left: 22px;
+            font-size: toRem(12);
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 8px;
+            width: 88px;
+            line-height: 30px;
+            text-align: center;
+        }
+    }
+
+    &__item {
+        background: linear-gradient(180deg, #202246 -53.38%, rgba(40, 43, 87, 0.17) 100%);
+        border-radius: 20px;
+        padding-bottom: 24px;
+        min-height: 412px;
+
+        &-content {
+            padding: 24px 12px 20px;
+            border-bottom: 1px solid #292B56;
+        }
+
+        &-span {
+            font-size: toRem(12);
+            color: #3BF5BD;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        &-title {
+            font-size: toRem(18);
+            font-weight: 600;
+            line-height: 150%;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 12px;
+        }
+
+        &-descr {
+            font-size: toRem(14);
+            line-height: 150%;
+            color: rgba(255, 255, 255, 0.4);
+        }
+
+        &-wrap {
+            // padding-left: 67px;
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+            // padding: 20px 0 28px;
+            padding: 20px 0 28px 67px;
+            position: relative;
+
+            &::before {
+                content: "";
+                position: absolute;
+                width: 40px;
+                height: 40px;
+                left: 15px;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+
+            &-1::before {
+                background: url(/src/assets/images/learn-item-name-1.png);
+            }
+
+            &-2::before {
+                background: url(/src/assets/images/learn-item-name-2.png);
+            }
+
+            &-3::before {
+                background: url(/src/assets/images/learn-item-name-3.png);
+            }
+
+            &-4::before {
+                background: url(/src/assets/images/learn-item-name-4.png);
+            }
+        }
+
+        &-name {
+            font-size: toRem(14);
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        &-prof {
+            font-size: toRem(14);
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        &-btn {
+            font-size: toRem(14);
+            font-weight: 600;
+            color: $light-color;
+            width: 155px;
+            line-height: 41px;
+            border-radius: 6px;
+            background-color: $accent-color;
+            text-align: center;
+            display: block;
+            margin: 0 auto;
+            display: none;
+        }
+
+        &:hover .learn__item-btn {
+            display: block;
+        }
+
+        &:hover {
+            min-height: 485px;
+        }
+    }
+
+    &__btn {
+        font-weight: 700;
+        color: $accent-color;
+        width: 198px;
+        line-height: 51px;
+        text-align: center;
+        background-color: transparent;
+        border: 1px solid $accent-color;
+        border-radius: 6px;
+        display: block;
+        margin: 0 auto;
+    }
+}
